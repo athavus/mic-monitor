@@ -37,10 +37,17 @@ pico_sdk_init()
 
 add_executable(mic-monitor 
             mic-monitor.c 
-            mic.c
-            ssd1306/ssd1306.c
-            ssd1306/ssd1306_fonts.c
-            ssd1306/ssd1306_bitmaps.c
+            drivers/mic/mic.c
+            drivers/display-lcd/ssd1306.c
+            drivers/display-lcd/ssd1306_fonts.c
+            drivers/display-lcd/ssd1306_bitmaps.c
+            drivers/matrix-leds-rgb/led_functions.c
+            drivers/matrix-leds-rgb/letters.c
+            drivers/matrix-leds-rgb/frames.c
+            src/display_manager.c
+            src/button_handler.c
+            src/audio_analyzer.c
+            src/matrix_controller.c
 )
 
 pico_set_program_name(mic-monitor "mic-monitor")
@@ -50,11 +57,16 @@ pico_set_program_version(mic-monitor "0.1")
 pico_enable_stdio_uart(mic-monitor 0)
 pico_enable_stdio_usb(mic-monitor 1)
 
+pico_generate_pio_header(mic-monitor ${CMAKE_CURRENT_LIST_DIR}/mic-monitor.pio)
+
 # Add the standard library to the build
 target_link_libraries(mic-monitor
         pico_stdlib
+        pico_bootrom
         hardware_adc
         hardware_i2c
+        hardware_pio
+        hardware_clocks
 )
 
 # Add the standard include files to the build
