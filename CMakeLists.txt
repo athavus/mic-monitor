@@ -41,13 +41,9 @@ add_executable(mic-monitor
             drivers/display-lcd/ssd1306.c
             drivers/display-lcd/ssd1306_fonts.c
             drivers/display-lcd/ssd1306_bitmaps.c
-            drivers/matrix-leds-rgb/led_functions.c
-            drivers/matrix-leds-rgb/letters.c
-            drivers/matrix-leds-rgb/frames.c
             src/display_manager.c
             src/button_handler.c
             src/audio_analyzer.c
-            src/matrix_controller.c
 )
 
 pico_set_program_name(mic-monitor "mic-monitor")

@@ -1,14 +1,10 @@
 #include "mic-monitor.h"
 #include "src/audio_analyzer.h"
 #include "src/display_manager.h"
-#include "src/matrix_controller.h"
 #include "src/button_handler.h"
 #include "drivers/display-lcd/ssd1306.h"
 #include "drivers/display-lcd/ssd1306_bitmaps.h"
 #include "drivers/mic/mic.h"
-#include "drivers/matrix-leds-rgb/frames.h"
-#include "drivers/matrix-leds-rgb/led_functions.h"
-#include "drivers/matrix-leds-rgb/letters.h"
 #include "pico/time.h"
 
 // Estado global de visualização
@@ -28,9 +24,6 @@ void init_hardware(void)
 
     // Inicializa o botão
     init_button(BUTTON_A_PIN);
-
-    // Inicializa a Matriz de Leds RGB
-    init_matrix(&pio, &sm, &offset);
 
     // Inicializa o microfone
     mic_init();
@@ -61,11 +54,6 @@ int main(void)
 
     // Inicializa gráfico como visualização padrão
     show_graph = true;
-
-    // Configura cor inicial para matriz de LEDs
-    // Cor em RGB
-    RGBColor sound_peak_color = {255, 0, 0}; // Vermelho
-    add_led(0, sound_peak_color, pio, sm, 0.1);
 
     while (1)
     {
