@@ -106,8 +106,8 @@ typedef struct {
 
 | Imagem 1 | Imagem 2 |
 |----------|----------|
-| ![Imagem 1](/documentation/image-bitdog-lab-1.png) | ![Imagem 2](/documentation/image-bitdog-lab-2.png) |
+| ![Imagem 1](/documentation/image-bitdoglab-1.png) | ![Imagem 2](/documentation/image-bitdoglab-2.png) |
 
 | Imagem 3 | Imagem 4 |
 |----------|----------|
-| ![Imagem 3](/documentation/image-bitdog-lab-3.png) | ![Imagem 4](/documentation/image-bitdog-lab-4.png) |
+| ![Imagem 3](/documentation/image-bitdoglab-3.png) | ![Imagem 4](/documentation/image-bitdoglab-4.png) |
