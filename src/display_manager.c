@@ -73,8 +73,6 @@ void display_audio_monitor(AudioAnalysis analysis)
     {
         // Vermelho (alto) - barra invertida para destacar
         ssd1306_InvertRectangle(0, 57, bar_width, 63); // Inverte para destacar
-        ssd1306_SetCursor(100, 48);
-        ssd1306_WriteString("ALTO", Font_7x10, White);
     }
 
     // Atualiza o display
