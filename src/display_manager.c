@@ -1,5 +1,5 @@
-#include "display_manager.h"
-#include "audio_analyzer.h"
+#include "inc/display_manager.h"
+#include "inc/audio_analyzer.h"
 #include "drivers/display-lcd/ssd1306.h"
 #include "drivers/display-lcd/ssd1306_fonts.h"
 #include <stdio.h>

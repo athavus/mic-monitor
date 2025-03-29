@@ -1,4 +1,4 @@
-#include "audio_analyzer.h"
+#include "inc/audio_analyzer.h"
 #include "drivers/mic/mic.h"
 #include <math.h>
 
